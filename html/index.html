@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+		<link href="./css/style.css" rel="stylesheet" type="text/css">
+
+    <link href="https://unpkg.com/tabulator-tables@4.8.1/dist/css/tabulator.min.css" rel="stylesheet">
+
+	</head>
+
+  <body class="page__body">
+    <div class="page__wrap">
+      <header class="page-header">
+        <div class="page-header__wrapper">
+        <nav class="page-header__main-nav">
+          <a href="<?php echo HOST; ?>?mode=sql" class="page-header__logo">
+            <img  src="img/logo.png" class="page-header__picture-logo">
+          </a>
+          <ul class="main-nav__list" aria-label="Список пунктов меню">
+            <li class="main-nav__item"><a href="<?php echo HOST; ?>?mode=sql">Задание SQL</a>
+            </li>
+            <li class="main-nav__item main-nav__item--auth">
+              <a <?php if ( $user === false) $host = '?mode=reg'; else $host = '?mode=auth&exit=true'; echo 'href='.HOST.$host; ?> title="Регистрация"><?php if ( $user === false) $title = 'Войти/зарегистрироваться'; else $title = 'Выйти'; echo $title; ?></a></li>
+            <li class="main-nav__item"><a href="<?php echo HOST; ?>?mode=lk"><img src="img/icon_profile.png"></a></li>
+          </ul>
+        </nav>
+      </div>
+      </header>
+       <?php echo $content; ?>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="<?php echo HOST; ?>/js/script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.8.1/dist/js/tabulator.min.js"></script>
+  </body>
+
+</html>

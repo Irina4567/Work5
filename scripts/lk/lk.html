@@ -1,0 +1,12 @@
+<main class="page-main page-wrapper">
+  <div class="panel-heading text-center"><h4><?php if (($user===true) and !(isset($_GET['status']) and $_GET['status'] == 'ok')) echo 'Добро пожаловать '.$name."!"; else if ($user===false) echo 'Вы не вошли в систему!';?></h4></div>
+
+  <?php if (($user===true) and !(isset($_GET['status']) and $_GET['status'] == 'ok')) echo '
+    <form class="form-horizontal page_form__form" action="" method="POST">
+      <input type="text" class="form__field" id="inputName" name="name" placeholder="Введите ФИО">
+      <div class="form__container">
+        <button type="submit" class="button form_button" name="submit">Сменить ФИО</button>
+      </div>
+    </form>
+  ';?>
+</main>

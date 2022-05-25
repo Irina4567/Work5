@@ -1,0 +1,57 @@
+<main class="page-main page-wrapper">
+  <section class="tables_from_bd">
+    <div id="users">
+      <table>
+        <tr>
+          <th>
+            ID
+          </th>
+          <th>
+            Login
+          </th>
+          <th>
+            Email
+          </th>
+        </tr>
+      </table>
+    </div>
+    <div id="orders">
+      <table>
+        <tr>
+          <th>
+            ID
+          </th>
+          <th>
+            User_id
+          </th>
+          <th>
+            Price
+          </th>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <section>
+    <button type="button" sql_r="3" class="button button--wide button--sql">Cписок email's пользователей, которые встречаются более чем у одного пользователя</button>
+
+    <button type="button" sql_r="4" class="button button--wide button--sql">Cписок логинов пользователей, которые не сделали ни одного заказа</button>
+
+    <button type="button" sql_r="5" class="button button--wide button--sql">Cписок логинов пользователей, у которых больше двух заказов</button>
+
+    <div id="sql_request">
+
+    </div>
+
+    <div id="sql">
+      <table>
+        <tr>
+          <th>
+            Result
+          </th>
+        </tr>
+      </table>
+    </div>
+
+  </section>
+
+</main>
